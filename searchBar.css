@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(38, 40, 53);
+}
+.searchContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+.serarchButton{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10%;
+   
+
+}
+.autoCompleteInput{
+    display: inline-block;
+   
+}
+.resultContainer{
+    margin-top: 3px;
+
+  
+    background-color: rgb(255, 255, 255);
+}
+.tagcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+    padding: 0 10px;
+    height: 50ox;
+    cursor: pointer;
+    user-select: none;
+
+}
+.productName{
+    width: 80%;
+}
