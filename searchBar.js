@@ -67,18 +67,44 @@ const selectUi =(key)=>{
     if (key=== "ArrowDown") {
         if(indexToselet===filteredProduct.length-1){
             indexToselet=-1;
+            iteamDeselectedUI();
             return;
         }
         indexToselet+=1;
-        const selectedIteam = filteredProduct[indexToselet].id.toString();
-    
+       iteamSlectedUI(indexToselet);
+    if (indexToselet>0) {
+        iteamDeselectedUI();
+    }
       
     } else if(key==="ArrowUp") {
+        if(indexToselet===0){
+            iteamDeselectedUI();
+            indexToselet=-1;
+            return;
+        }
+
+        indexToselet-=1;
+        iteamDeselectedUI();
+        iteamSlectedUI(indexToselet);
         
     }else{
          
     }
+   
+
 
 }
-
+const iteamSlectedUI = (index)=>{
+    const SelectedContainerID = filteredProduct[index].id.toString();
+    const SelectedContainer= document.getElementById(SelectedContainerID);
+    SelectedContainer.style.backgroundColor= "#237BFF";
+    SelectedContainer.firstChild.style.color="white";
+    SelectedContainer.classList.add("selected");
+} ;
+const iteamDeselectedUI= ()=>{
+    const Desaelectediteam= document.querySelector(".selected");
+    Desaelectediteam.style.backgroundColor= "white";
+    Desaelectediteam.firstChild.style.color="black";
+    Desaelectediteam.classList.remove("selected");
+}
 }
