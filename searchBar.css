@@ -18,12 +18,14 @@ body {
 }
 .autoCompleteInput{
     display: inline-block;
+    opacity: .7;
+   
    
 }
 .resultContainer{
     margin-top: 3px;
-
-  
+    background-color: rgb(88, 88, 88);
+    opacity: .8;
     background-color: rgb(255, 255, 255);
 }
 .tagcontainer{
@@ -31,10 +33,11 @@ body {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid lightgray;
-    padding: 0 10px;
+    padding: 1px 10px;
     height: 50ox;
     cursor: pointer;
     user-select: none;
+
 
 }
 .productName{

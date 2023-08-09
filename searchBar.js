@@ -79,7 +79,11 @@ const selectUi =(key)=>{
     } else if(key==="ArrowUp") {
         if(indexToselet===0){
             iteamDeselectedUI();
-            indexToselet=-1;
+            indexToselet= -1;
+            return;
+        }
+        if(indexToselet===-1){
+           
             return;
         }
 
